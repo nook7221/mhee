@@ -27,6 +27,7 @@
                                 <Label Text="{Binding actualstart}"></Label>
                                 <Label Text="{Binding actuakend}"></Label>
                                 <Label Text="{Binding varient}"></Label>
+                                <Label Text="dd"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
