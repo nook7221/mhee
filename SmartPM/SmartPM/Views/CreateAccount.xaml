@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.CreateAccount"
+             xmlns:vm="clr-namespace:SmartPM.ViewModels;assembly:SmartPM"
+             Title="Create New Account">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Username"
+                           TextColor="#44687b"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                    <Entry x:Name="username"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="your name"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"/>
+
+                    <Label Text="Password"
+                           TextColor="#44687b"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
+                    <Entry x:Name="password"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="your password"
+                           IsPassword="True"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,0,0,10"/>
+
+                    <Label Text="FirstName"
+                           TextColor="#44687b"
+                           Grid.Row="4"
+                           Grid.Column="0"/>
+                    <Entry x:Name="firstname"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="your first name"
+                           Grid.Row="5"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,0,0,10"/>
+
+                    <Label Text="LastName"
+                           TextColor="#44687b"
+                           Grid.Row="6"
+                           Grid.Column="0"/>
+                    <Entry x:Name="lastname"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="your last name"
+                           Grid.Row="7"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"/>
+
+                    <Label Text="Job Title"
+                           TextColor="#44687b"
+                           Grid.Row="8"
+                           Grid.Column="0"/>
+                    <Entry x:Name="title"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="Job Resiponsible"
+                           Grid.Row="9"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"/>
+
+                    <Label Text="Group"
+                           TextColor="#44687b"
+                           Grid.Row="10"
+                           Grid.Column="0"
+                           />
+                    <Picker x:Name="group" 
+                            Title="Pick Select User Group"
+                            TextColor="Black"
+                            Grid.Row="11"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,30"
+                            SelectedIndexChanged="group_SelectedIndexChanged"
+                            />
+
+                    <Button Clicked="Button_Clicked"
+                            Text="Submit"
+                            TextColor="#3ABCC7"
+                            BackgroundColor="#FFFFFF"
+                            BorderColor="#3ABCC7"
+                            BorderWidth="0.8"
+                            Grid.Row="12"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            StyleClass="Small"/>
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

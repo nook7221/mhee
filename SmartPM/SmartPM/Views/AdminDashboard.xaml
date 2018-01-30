@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.AdminDashboard"
+             Title="Dashboard Admin"
+             BackgroundColor="#F4F4F4">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Activated="ToolbarItem_Activated" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout HeightRequest="100"
+                             Grid.Row="0"
+                             Grid.Column="0"
+                             Padding="5,20,0,5"
+                             BackgroundColor="White">
+                    <Image Source="addnew.png"/>
+                    <Label 
+                        TextColor="#44687b"
+                        Text="สร้างผู้ใช้งานใหม่" HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </StackLayout>
+                <StackLayout HeightRequest="100"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Padding="5,20,0,5"
+                             BackgroundColor="White">
+                    <Image Source="editnew"/>
+                    <Label 
+                        TextColor="#44687b"
+                        Text="แก้ไขข้อมูลผู้ใช้งาน" HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Grid.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout HeightRequest="100"
+                             Grid.Row="1"
+                             Grid.Column="0"
+                             Padding="5,20,0,5"
+                             BackgroundColor="White">
+                    <Image Source="list.png"/>
+                    <Label Text="ข้อมูลผู้ใช้งาน" HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Grid.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout HeightRequest="100"
+                             Grid.Row="1"
+                             Grid.Column="1"       
+                             Padding="5,20,0,5"
+                             BackgroundColor="White">
+                    <Image Source="plist.png"/>
+                    <Label 
+                        TextColor="#44687b"
+                        Text="รายการโครงการ" HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Grid.GestureRecognizers>
+                </StackLayout>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

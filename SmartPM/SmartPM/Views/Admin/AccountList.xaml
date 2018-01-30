@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.AccountList">
+
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Logout" Activated="ToolbarItem_Activated" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Label x:Name="ConnectivityLabel"></Label>
+            <ListView
+                x:Name="userlist"
+                SeparatorVisibility="None"
+                HasUnevenRows="True"
+                ItemTapped="userlist_ItemTapped"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="False"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout 
+                                BackgroundColor="White"
+                                Margin="2">
+                                <!--
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Margin="5,5,0,0" 
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           Text="{Binding firstname}"/>
+                                    <Label Grid.Row="1" Grid.Column="0" Margin="5,0,0,0"
+                                           Text="{Binding lastname}"/>
+                                    <Label Grid.Row="2" Grid.Column="0" Margin="5,0,0,5" 
+                                           Text="{Binding status}"/>
+                                    <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Aspect="AspectFill" Margin="2"
+                                           Source="user_icon.png"/>
+                                    
+                                </Grid>
+                               
+                                                           
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,5,0,0">
+                                    <Label Text="User ID : "/>
+                                    <Label Text="{Binding userId}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,0">
+                                    <Label Text="Lastname : "/>
+                                    <Label Text="{Binding lastname}"/>
+                                </StackLayout>
+                                 -->
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,5,0,0">
+                                    <Label
+                                        TextColor="#44687b"
+                                        Text="{Binding firstname}"/>
+                                    <Label 
+                                        TextColor="#44687b"
+                                        Text="{Binding lastname}"/>
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Status : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding status}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

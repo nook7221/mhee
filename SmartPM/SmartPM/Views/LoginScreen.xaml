@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.LoginScreen"
+             xmlns:local="clr-namspace:SmartPM;assembly:SmartPM"
+             xmlns:vm="clr-namespace:SmartPM.ViewModels;assembly:SmartPM"
+             BackgroundImage="login.jpg">
+    
+    <ContentPage.BindingContext>
+        <vm:AuthenViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout Padding="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+        <Grid Padding="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ContentView HeightRequest="220" 
+                             WidthRequest="200"
+                             Grid.Row="0" 
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" 
+                             Padding="0,20,0,3">
+                <Image Source="" Aspect="AspectFit" />
+            </ContentView>
+
+            <Entry 
+                       Text="{Binding AuthenModel.Username, Mode=TwoWay}"
+                       Placeholder="Username" 
+                       PlaceholderColor="#FFFFFF"
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="White"
+                       FontSize="Small"
+                       StyleClass="Small"/>
+            <Entry 
+                       Text="{Binding AuthenModel.Password, Mode=TwoWay}"
+                       IsPassword="true" 
+                       Placeholder="Password"
+                       PlaceholderColor="#FFFFFF"
+                       Grid.Row="3" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="White"
+                       FontSize="Small"
+                       StyleClass="Small"/>
+
+            <Button 
+                        Command="{Binding LoginCommand}"
+                        BackgroundColor="#FFFFFF"
+                        TextColor="#3ABCC7"
+                        BorderColor="#3ABCC7"
+                        BorderWidth="0.8"
+                        Text="Sign In" 
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                        StyleClass="Small"/>
+
+
+            <Label Text="Rememberme"
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       FontSize="Small"
+                       TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Forgot password?"
+                       Grid.Row="6"
+                       Grid.Column="1"
+                       FontSize="Small"
+                       TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       />
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
