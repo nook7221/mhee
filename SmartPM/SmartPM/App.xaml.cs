@@ -16,10 +16,10 @@ namespace SmartPM
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new TeamDashboardScreen());
+           MainPage = new NavigationPage(new TeamDashboardScreen());
             //var page = new PMDashboardScreen();
             //NavigationPage.SetHasBackButton(page, false);
-           // MainPage = new LoginScreen();
+            //MainPage = new LoginScreen();
         }
 
 		protected override void OnStart ()

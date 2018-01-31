@@ -48,7 +48,7 @@ namespace SmartPM.Views.Team
 
         private async void TapGestureRecognizer_Tapped_3(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TeamTimesheetScreen());
+            await Navigation.PushAsync(new dummyView());
         }
     }
 }

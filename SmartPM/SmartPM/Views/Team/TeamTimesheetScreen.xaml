@@ -2,12 +2,151 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartPM.Views.Team.TeamTimesheetScreen"
-             Title="Timesheet">
+             Title="Add ...">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Timesheet Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+
+            <StackLayout Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Date"
+                           TextColor="#44687b"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                    <Entry x:Name="date"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="Date Realtime"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"/>
+                    
+                    <Label Text="Project"
+                           TextColor="#44687b"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           />
+                    <Picker x:Name="project" 
+                            Title="Pick Select Project"
+                            TextColor="Black"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,30"
+                            SelectedIndexChanged="project_SelectedIndexChanged"
+                            />
+
+
+                    <Label Text="Phase"
+                           TextColor="#44687b"
+                           Grid.Row="4"
+                           Grid.Column="0"
+                           />
+
+                    <Picker x:Name="phase" 
+                            Title="Pick Select Phase"
+                            TextColor="Black"
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,30"
+                            SelectedIndexChanged="phase_SelectedIndexChanged"
+                            />
+
+
+
+                    <Label Text="JobResponsible"
+                           TextColor="#44687b"
+                           Grid.Row="6"
+                           Grid.Column="0"
+                           />
+                    <Picker x:Name="jobResp" 
+                            Title="Pick Select job"
+                            TextColor="Black"
+                            Grid.Row="7"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,30"
+                            SelectedIndexChanged="job_SelectedIndexChanged"
+                            />
+
+                    <Label Text="Duration"
+                           TextColor="#44687b"
+                           Grid.Row="8"
+                           Grid.Column="0"/>
+                    <Entry x:Name="duration"
+                           Keyboard="Numeric"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="duration (hr.)"
+                           Grid.Row="9"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"/>
+
+                    <Label Text="Overtime"
+                           TextColor="#44687b"
+                           Grid.Row="10"
+                           Grid.Column="0"/>
+                    <Entry x:Name="overtime"
+                           Keyboard="Numeric"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="Overtime"
+                           IsPassword="True"
+                           Grid.Row="11"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,0,0,10"/>
+
+                    <Label Text="RFC No."
+                           TextColor="#44687b"
+                           Grid.Row="12"
+                           Grid.Column="0"/>
+                    <Entry x:Name="rfc"
+                           FontSize="Micro"
+                           TextColor="Black"
+                           Placeholder="Null"
+                           Grid.Row="13"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,0,0,10"/>
+
+                    <Button Clicked="Button_Clicked"
+                            Text="Submit"
+                            TextColor="#3ABCC7"
+                            BackgroundColor="#FFFFFF"
+                            BorderColor="#3ABCC7"
+                            BorderWidth="0.8"
+                            Grid.Row="14"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            StyleClass="Small"/>
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

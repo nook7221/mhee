@@ -1,0 +1,76 @@
+﻿using SmartPM.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http;
+using System.Net;
+using SmartPM.Views.Team;
+
+namespace SmartPM.Views.Team
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TeamMainTimesheet : ContentPage
+    {
+        public TeamMainTimesheet()
+        {
+            InitializeComponent();
+
+            List<TimeSheetModel> list = new List<TimeSheetModel>
+            {
+                new TimeSheetModel
+                {
+                    userId = "userLogged",
+                    userName = "nameUserlogged",
+                    firstname = "Fullname UserLogged",
+                    lastname = "lnameUserLogged",
+                    userPosition = "User Position",
+                    date = "Get Realtime",
+                    timesheetId = "No.001",
+                    projectname = "Get And Match for User",
+                    projectPhase = "Get And Mach for User",
+                    jobResponsible = "Get And Math for User",
+                    Duration = "70hr",
+                    OT = "10hr",
+                    total = "Duration + OT"
+
+                },
+
+                  new TimeSheetModel
+                {
+
+                    userId = "userLogged",
+                    userName = "nameUserlogged",
+                    firstname = "Fullname UserLogged",
+                    lastname = "lnameUserLogged2",
+                    userPosition = "User Position",
+                    timesheetId = "No.002",
+                     date = "Get Realtime",
+                    projectname = "Get And Match for User",
+                    projectPhase = "Get And Mach for User",
+                    jobResponsible = "Get And Math for User",
+                    Duration = "7000hr",
+                    OT = "1000hr",
+                    total = "Duration + OT"
+
+                }
+            };
+            Teamtimesheetlist.ItemsSource = list;
+        }
+        private async void timesheetlist_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //await Navigation.PushAsync(new TeamTimesheetScreen());
+        }
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TeamTimesheetScreen());
+        }
+    }
+    }

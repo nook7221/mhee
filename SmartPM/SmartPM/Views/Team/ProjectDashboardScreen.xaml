@@ -65,7 +65,7 @@
                     <Image Source="plist.png"/>
                     <Label 
                         TextColor="#44687b"
-                        Text="TimeSheet" HorizontalOptions="Center"/>
+                        Text="Dummy" HorizontalOptions="Center"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
                     </Grid.GestureRecognizers>

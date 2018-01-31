@@ -50,7 +50,9 @@
                              Padding="5,20,0,5"
                              BackgroundColor="White">
                     <Image Source="list.png"/>
-                    <Label Text="Funtion 3" HorizontalOptions="Center"/>
+                    <Label 
+                         TextColor="#44687b"
+                        Text="Profile" HorizontalOptions="Center"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                     </Grid.GestureRecognizers>

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartPM.Views.Team.TeamScreen"
-             Title="The Dream Team">
+             Title="The Dream Team Of Project XXX">
     <ContentPage.Content>
         <StackLayout Padding="5">
             <ListView

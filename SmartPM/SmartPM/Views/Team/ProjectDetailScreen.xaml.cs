@@ -29,7 +29,7 @@ namespace SmartPM.Views.Team
             {
                 new AProjectList
                 {
-                    projectName = "dummyProject001",
+                    projectName = "dummyProject XXX",
                     projectManager = "dummyManager001",
                     projectStart = "dummyStartDate",
                     projectEnd = "dummyEndDate",
