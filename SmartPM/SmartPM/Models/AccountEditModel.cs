@@ -19,7 +19,7 @@ namespace SmartPM.Models
 
         public string groupId { get; set; }
 
-        public string GroupName { get; set;}
+        public string groupName { get; set;}
 
         public string status { get; set; }
 

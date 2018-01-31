@@ -21,16 +21,18 @@ namespace SmartPM.Views
     public partial class AccountList : ContentPage
     {
         private string id { get; set; }
-        public AccountList()
+        private string ulogged { get; set; }
+        public AccountList(AuthenModel authen)
         {
 
             InitializeComponent();
+            ulogged = authen.Username;
 
             if (InternetCheckConnectivity() == true)
-                ConnectivityLabel.Text = "เนตไม่หมดหรอแจ๊ะ";
+                GetAccount();
             else
-                ConnectivityLabel.Text = "เนตหมดหรอแจ๊ะ";
-            //GetAccount();*/
+                ConnectivityLabel.Text = "เนตหมดหรอ Kruf";
+
 
 
 
@@ -52,8 +54,9 @@ namespace SmartPM.Views
 
             var Accountlists = e.Item as AccountModel;
             id = Accountlists.userId;
+           
 
-            var page = new EditAccount(id);
+            var page = new EditAccount(id,ulogged);
             await Navigation.PushAsync(page);
         }
         private async void ToolbarItem_Activated(object sender, EventArgs e)

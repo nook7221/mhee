@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.Team.TeamScreen"
+             Title="The Dream Team">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <ListView
+                x:Name="projectlist"
+                SeparatorVisibility="None"
+                HasUnevenRows="True"     
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout 
+                                BackgroundColor="White"
+                                Margin="2">
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,5,0,0">
+                                    <Label
+                                        TextColor="#44687b"
+                                        Text="Project Name : "/>
+                                    <Label 
+                                        TextColor="#44687b"
+                                        Text="{Binding projectnumber}"/>
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Project Manager : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding managername}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Person 1 : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding employeename1}"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Person 2 : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding employeename2}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Person 3 : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding employeename3}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Person 4 : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding employeename4}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="15,0,0,5">
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="Person 5 : "/>
+                                    <Label 
+                                        FontSize="Micro"
+                                        Text="{Binding employeename5}"/>
+                                </StackLayout>
+                               
+
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

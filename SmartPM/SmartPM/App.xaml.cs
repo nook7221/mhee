@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SmartPM.Views;
+using SmartPM.Views.PM;
+using SmartPM.Views.Team;
+
 using Xamarin.Forms;
 
 namespace SmartPM
@@ -13,8 +16,11 @@ namespace SmartPM
 		{
 			InitializeComponent();
 
-            MainPage = new LoginScreen();
-		}
+            MainPage = new NavigationPage(new TeamDashboardScreen());
+            //var page = new PMDashboardScreen();
+            //NavigationPage.SetHasBackButton(page, false);
+           // MainPage = new LoginScreen();
+        }
 
 		protected override void OnStart ()
 		{

@@ -20,14 +20,14 @@ namespace SmartPM.Views
 	public partial class CreateAccount : ContentPage
 	{
         private CreatAccountModel newAccont = new CreatAccountModel();
-        private AuthenModel authen = new AuthenModel();
+        private AuthenModel authens = new AuthenModel();
 		public CreateAccount (AuthenModel authen)
 		{
             InitializeComponent();
             group.Items.Add("Admin");
             group.Items.Add("Project Manager");
             group.Items.Add("Team Developer");
-            this.authen = authen;
+            authens = authen;
         }
 
         private void group_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace SmartPM.Views
             newAccont.acPassword = password.Text;
             newAccont.acFirstname = firstname.Text;
             newAccont.acLastname = lastname.Text;
-            newAccont.acUserLogged = authen.Username; 
+            newAccont.acUserLogged = authens.Username; 
             newAccont.acJobresp = title.Text;
 
 

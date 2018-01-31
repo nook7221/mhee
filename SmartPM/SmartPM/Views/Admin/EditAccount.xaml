@@ -10,6 +10,7 @@
         <ScrollView>
 
             <StackLayout Padding="20">
+                <Label x:Name="CheckConnectivityLabel"></Label>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -87,7 +88,7 @@
                            Grid.Column="0"/>
                     <Entry x:Name="jobResp"
                            FontSize="Micro"
-                           Text="{Binding jobResponse}"
+                           Text="{Binding jobResponsible}"
                            Grid.Row="9"
                            Grid.Column="0"
                            Grid.ColumnSpan="2"
@@ -106,14 +107,7 @@
                             Margin="0,0,0,30"
                             SelectedIndexChanged="status_SelectedIndexChanged"
                             />
-                    <!--
-                    <Entry x:Name="stat"
-                           FontSize="Micro"
-                           Text="{Binding status}"
-                           Grid.Row="11"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="2"
-                            Margin="0,0,0,10"/> -->
+                    
 
                     <Label Text="Group"
                            TextColor="#44687b"

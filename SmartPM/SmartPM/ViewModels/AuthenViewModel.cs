@@ -13,6 +13,9 @@ using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Net;
 using SmartPM.Views;
+using SmartPM.Views.Team;
+using SmartPM.Views.PM;
+using SmartPM.Views.Admin;
 
 namespace SmartPM.ViewModels
 {
@@ -45,8 +48,8 @@ namespace SmartPM.ViewModels
                    }
                    else
                    {
-                       App.Current.MainPage = new NavigationPage(new AdminDashboard(userAccount));
-                       //RenderAPIauthen(userAccount.Username, userAccount.Password);
+                      // App.Current.MainPage = new NavigationPage(new AdminDashboard(userAccount));
+                       RenderAPIauthen(userAccount.Username, userAccount.Password);
                    }
                    
                });
@@ -77,17 +80,53 @@ namespace SmartPM.ViewModels
 
                 if (groupid == "99")
                 {
-                    App.Current.MainPage = new NavigationPage(new AdminDashboard(userAccount));
+                    var page = new AdminDashboard();
+                    NavigationPage.SetHasBackButton(page, false);
+                    App.Current.MainPage = new NavigationPage(page);
+                    
+                    /*
+                    App.Current.MainPage = new TabbedPage
+                    {
+                        Children = {
+                            new AdminDashboard(),
+                            new AdminProfile()
+                        }
+                    };*/
 
                 }
                 else if (groupid == "50")
                 {
-                    App.Current.MainPage = new AdminDashboard(AuthenModel);
+
+                    var page = new PMDashboardScreen();
+                    NavigationPage.SetHasBackButton(page, false);
+                    App.Current.MainPage = new NavigationPage(page);
+                    /*
+                    App.Current.MainPage = new NavigationPage(new TabbedPage {
+                        Children = {
+                            new PMDashboardScreen(),
+                            new PMProfileScreen()
+                        }
+                    };)*/
 
                 }
                 else if (groupid == "10")
                 {
-                    App.Current.MainPage = new AdminDashboard(AuthenModel);
+
+                    var page = new TeamDashboardScreen();
+                    NavigationPage.SetHasBackButton(page, false);
+                    App.Current.MainPage = new NavigationPage(page);
+                    /*
+                    var page = new TeamMainScreen();
+                    NavigationPage.SetHasBackButton(page, false);
+                    App.Current.MainPage = new NavigationPage(page);
+                    /*
+                    App.Current.MainPage = new TabbedPage
+                    {
+                        Children = {
+                            new TeamDashboardScreen(),
+                            new TeamProfileScreen()
+                        }
+                    };*/
                 }
                 else
                 {

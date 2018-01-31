@@ -20,20 +20,28 @@ namespace SmartPM.Views.Admin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EditAccount : ContentPage
 	{
-        private AuthenModel authenModel;
         AccountEditModel _DataContex = new AccountEditModel();
         private string uid;
+        private string ulogged;
         private string ugroup;
         private string ustat;
         
-		public EditAccount (string id)
+		public EditAccount (string id, string ulog)
 		{
 
 			InitializeComponent ();
             uid = id;
+            ulogged = ulog;
+
+            group.Items.Add("Admin");
+            group.Items.Add("ProjectManager");
+            group.Items.Add("TeamDeveloper");
+
+            stataccount.Items.Add("Active");
+            stataccount.Items.Add("DeActived");
 
             if (InternetCheckConnectivity() == false)
-                DisplayAlert("Notification", "ไม่ได้เชื่อมต่อ Internet", "CanSel");
+                CheckConnectivityLabel.Text = "Internet not connect";
             else
                 RenderAPIAccountEdit(uid);
 
@@ -55,19 +63,16 @@ namespace SmartPM.Views.Admin
         public async void RenderAPIAccountEdit(string id)
         {
             string jsonResult = await DetailsServices(id);
-            List<AccountEditModel> accountDetail = new List<AccountEditModel>();
-            accountDetail = JsonConvert.DeserializeObject<List<AccountEditModel>>(jsonResult);
-
-            foreach (var dataValue in accountDetail)
-            {
-                _DataContex.username = dataValue.username;
-                _DataContex.password = dataValue.password;
-                _DataContex.firstname = dataValue.firstname;
-                _DataContex.lastname = dataValue.lastname;
-                _DataContex.jobResponsible = dataValue.jobResponsible;
-                _DataContex.status = dataValue.status;
-                _DataContex.GroupName = dataValue.GroupName;
-            }
+            JObject dataemp = JObject.Parse(jsonResult);
+     
+                _DataContex.username = (string)dataemp["username"];
+                _DataContex.password = (string)dataemp["password"]; 
+                _DataContex.firstname = (string)dataemp["firstname"]; 
+                _DataContex.lastname = (string)dataemp["lastname"]; 
+                _DataContex.jobResponsible = (string)dataemp["jobResponsible"]; 
+                _DataContex.status = (string)dataemp["status"]; 
+                _DataContex.groupName = (string)dataemp["groupName"]; 
+            
             BindingContext = _DataContex;
 
         }
@@ -111,7 +116,7 @@ namespace SmartPM.Views.Admin
             _DataContex.firstname = firstname.Text;
             _DataContex.lastname = lastname.Text;
             _DataContex.jobResponsible = jobResp.Text;
-            _DataContex.userEditBy = authenModel.Username;
+            _DataContex.userEditBy = ulogged;
             _DataContex.status = ustat;
             _DataContex.groupId = ugroup;
 

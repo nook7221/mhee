@@ -21,6 +21,7 @@ namespace SmartPM.Models
             public string actualend { get; set; }
 
             public string variant { get; set; }
+        public string team { get; set; }
     }
     public partial class TaskModels
     {
