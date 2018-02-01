@@ -4,16 +4,16 @@
              x:Class="SmartPM.Views.LoginScreen"
              xmlns:local="clr-namspace:SmartPM;assembly:SmartPM"
              xmlns:vm="clr-namespace:SmartPM.ViewModels;assembly:SmartPM"
-             BackgroundImage="login.jpg">
+             BackgroundColor="#E91E63">
     
     <ContentPage.BindingContext>
         <vm:AuthenViewModel/>
     </ContentPage.BindingContext>
     
-    <StackLayout Padding="10"
+    <StackLayout Padding="50"
                      HorizontalOptions="Center"
                      VerticalOptions="Center">
-        <Grid Padding="2">
+        <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="5"/>
@@ -40,13 +40,13 @@
             <Entry 
                        Text="{Binding AuthenModel.Username, Mode=TwoWay}"
                        Placeholder="Username" 
-                       PlaceholderColor="#FFFFFF"
+                       PlaceholderColor="White"
                        Grid.Row="2" 
                        Grid.Column="0" 
                        Grid.ColumnSpan="2" 
                        TextColor="White"
-                       FontSize="Small"
-                       StyleClass="Small"/>
+                       FontSize="Small"             
+                      />
             <Entry 
                        Text="{Binding AuthenModel.Password, Mode=TwoWay}"
                        IsPassword="true" 

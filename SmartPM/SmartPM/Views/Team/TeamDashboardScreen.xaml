@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartPM.Views.Team.TeamDashboardScreen"
-             Title="Dashboard for Team">
+             Title="DASHBOARD">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout>
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -14,31 +20,41 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout HeightRequest="100"
+                    <BoxView Grid.RowSpan="3" Grid.Column="1" BackgroundColor="#FFE0E0E0">
+                        <BoxView.Margin>
+                            <OnPlatform x:TypeArguments="Thickness" Android="0,16,0,16" iOS="0,15,0,15" WinPhone="0,16,0,16" />
+                        </BoxView.Margin>
+                    </BoxView>
+                    <StackLayout HeightRequest="100"
                              Grid.Row="0"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                    <Image Source="addnew.png"/>
+                               Margin="5,0,0,0"
+                             BackgroundColor="#03A9F4"
+                             >
+            
                     <Label 
-                        TextColor="#44687b"
-                        Text="Project" HorizontalOptions="Center"/>
+                        TextColor="White"
+                        Text="PROJECT" HorizontalOptions="Center" VerticalOptions="Center"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Grid.GestureRecognizers>
                 </StackLayout>
                 <StackLayout HeightRequest="100"
                              Grid.Row="0"
-                             Grid.Column="1"
+                             Grid.Column="2"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                    <Image Source="editnew"/>
+                               Margin="0,0,5,0"
+                             BackgroundColor="#26A69A"
+                             >
+            
                     <Label 
-                        TextColor="#44687b"
-                        Text="Timesheet" HorizontalOptions="Center"/>
+                        TextColor="White"
+                        Text="TIMESHEET" HorizontalOptions="Center" VerticalOptions="Center"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
                     </Grid.GestureRecognizers>
@@ -48,32 +64,50 @@
                              Grid.Row="1"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                    <Image Source="list.png"/>
+                               Margin="5,0,0,0"
+                             BackgroundColor="#E91E63"
+                             >
+                   <!-- <Image Source="list.png"/> -->
                     <Label 
-                         TextColor="#44687b"
-                        Text="Profile" HorizontalOptions="Center"/>
+                         TextColor="White"
+                        Text="ACCOUNT" HorizontalOptions="Center" VerticalOptions="Center"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                     </Grid.GestureRecognizers>
                 </StackLayout>
 
-                <StackLayout HeightRequest="100"
+                    <StackLayout HeightRequest="100"
                              Grid.Row="1"
-                             Grid.Column="1"       
+                             Grid.Column="2"       
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                    <Image Source="plist.png"/>
-                    <Label 
-                        TextColor="#44687b"
-                        Text="Function 4" HorizontalOptions="Center"/>
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
-                    </Grid.GestureRecognizers>
-                </StackLayout>
-
-
+                              Margin="0,0,5,0"
+                             BackgroundColor="#9C27B0"
+                             >
+   
+                        <Label 
+                        TextColor="White"
+                        Text="GAMES" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                        </Grid.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" BackgroundColor="#E91E63">
+                    <Grid HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="userTemp" HeightRequest="30" Aspect="AspectFit" Margin="0,10,0,10"></Image>
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="Monkey D Luffy" FontSize="20" TextColor="White"></Label>
+                            <Label Text="ราชาโจรสลัด" FontSize="10" Margin="0,-10,0,0" TextColor="#ffe6e9"></Label>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+

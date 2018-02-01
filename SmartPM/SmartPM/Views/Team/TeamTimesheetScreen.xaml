@@ -140,6 +140,7 @@
                             BackgroundColor="#FFFFFF"
                             BorderColor="#3ABCC7"
                             BorderWidth="0.8"
+                            BorderRadius="20"
                             Grid.Row="14"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"

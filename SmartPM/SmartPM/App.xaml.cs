@@ -5,7 +5,7 @@ using System.Text;
 using SmartPM.Views;
 using SmartPM.Views.PM;
 using SmartPM.Views.Team;
-
+using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
 
 namespace SmartPM
@@ -15,11 +15,15 @@ namespace SmartPM
 		public App ()
 		{
 			InitializeComponent();
-
-           MainPage = new NavigationPage(new TeamDashboardScreen());
+            //MainPage = new UserProfileScreen();
+            MainPage = new NavigationPage(new TeamDashboardScreen())
+            {
+                BarBackgroundColor = Color.FromHex("#E91E63"),
+                BarTextColor = Color.White
+           };
             //var page = new PMDashboardScreen();
             //NavigationPage.SetHasBackButton(page, false);
-            //MainPage = new LoginScreen();
+          //  MainPage = new LoginScreen();
         }
 
 		protected override void OnStart ()

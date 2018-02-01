@@ -122,12 +122,13 @@
             </ListView>
 
             <Button Clicked="Button_Clicked"
-                            Text="Add"
+                            BorderRadius="70"
+                            Text="TestButton"
                             TextColor="#3ABCC7"
                             BackgroundColor="#FFFFFF"
                             BorderColor="#3ABCC7"
                             BorderWidth="0.8"
-                            StyleClass="Small"/>
+                           />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
