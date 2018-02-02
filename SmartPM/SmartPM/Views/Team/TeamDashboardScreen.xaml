@@ -18,43 +18,37 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="1"/>
+                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                    <BoxView Grid.RowSpan="3" Grid.Column="1" BackgroundColor="#FFE0E0E0">
-                        <BoxView.Margin>
-                            <OnPlatform x:TypeArguments="Thickness" Android="0,16,0,16" iOS="0,15,0,15" WinPhone="0,16,0,16" />
-                        </BoxView.Margin>
-                    </BoxView>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                
                     <StackLayout HeightRequest="100"
                              Grid.Row="0"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                               Margin="5,0,0,0"
-                             BackgroundColor="#03A9F4"
+                             Margin="5,0,0,0"
+                             BackgroundColor="#546E7A"
                              >
-            
-                    <Label 
+                        <Image Source="thumBook" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/> 
+                        <Label 
                         TextColor="White"
-                        Text="PROJECT" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        Text="PROJECT" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Grid.GestureRecognizers>
                 </StackLayout>
                 <StackLayout HeightRequest="100"
                              Grid.Row="0"
-                             Grid.Column="2"
+                             Grid.Column="1"
                              Padding="5,20,0,5"
                                Margin="0,0,5,0"
-                             BackgroundColor="#26A69A"
+                             BackgroundColor="#6A1B9A"
                              >
-            
-                    <Label 
+                        <Image Source="thumTime" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
+                        <Label 
                         TextColor="White"
-                        Text="TIMESHEET" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    Text="TIMESHEET" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
                     </Grid.GestureRecognizers>
@@ -64,13 +58,13 @@
                              Grid.Row="1"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                               Margin="5,0,0,0"
-                             BackgroundColor="#E91E63"
+                             Margin="5,0,0,0"
+                             BackgroundColor="#00695C"
                              >
-                   <!-- <Image Source="list.png"/> -->
-                    <Label 
+                        <Image Source="thumUser" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
+                        <Label 
                          TextColor="White"
-                        Text="ACCOUNT" HorizontalOptions="Center" VerticalOptions="Center"/>
+                       Text="ACCOUNT" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                     </Grid.GestureRecognizers>
@@ -78,15 +72,15 @@
 
                     <StackLayout HeightRequest="100"
                              Grid.Row="1"
-                             Grid.Column="2"       
+                             Grid.Column="1"       
                              Padding="5,20,0,5"
                               Margin="0,0,5,0"
-                             BackgroundColor="#9C27B0"
+                             BackgroundColor="#512DA8"
                              >
-   
+                        <Image Source="thumChart" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
                         <Label 
                         TextColor="White"
-                        Text="GAMES" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        Text="TRACKING PERFOMANCE" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
                         </Grid.GestureRecognizers>

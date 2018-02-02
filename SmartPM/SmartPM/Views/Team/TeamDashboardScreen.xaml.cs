@@ -22,8 +22,10 @@ namespace SmartPM.Views.Team
         private AuthenModel userAccount = new AuthenModel();
 		public TeamDashboardScreen ()
 		{
-			InitializeComponent ();
-		}
+            
+            InitializeComponent ();
+
+        }
 
         private async void ToolbarItem_Activated(object sender, EventArgs e)
         {
@@ -33,6 +35,10 @@ namespace SmartPM.Views.Team
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            /*var page = new ProjectList()
+            {
+                BarBackgroundColor = Color.FromHex("#546E7A")
+            };*/
             await Navigation.PushAsync(new ProjectList());
         }
 

@@ -4,40 +4,43 @@
              x:Class="SmartPM.Views.LoginScreen"
              xmlns:local="clr-namspace:SmartPM;assembly:SmartPM"
              xmlns:vm="clr-namespace:SmartPM.ViewModels;assembly:SmartPM"
-             BackgroundColor="#E91E63">
-    
+             BackgroundImage="blure_2.jpg"
+             >
+    <!--BackgroundColor="#E91E63"-->
     <ContentPage.BindingContext>
         <vm:AuthenViewModel/>
     </ContentPage.BindingContext>
     
-    <StackLayout Padding="50"
+    <AbsoluteLayout Padding="50"
                      HorizontalOptions="Center"
                      VerticalOptions="Center">
-        <Grid >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <ContentView HeightRequest="220" 
+        <StackLayout>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ContentView HeightRequest="220" 
                              WidthRequest="200"
                              Grid.Row="0" 
                              Grid.Column="0"
                              Grid.ColumnSpan="2" 
                              Padding="0,20,0,3">
-                <Image Source="" Aspect="AspectFit" />
-            </ContentView>
+                    <Image Source="" Aspect="AspectFit" />
+                </ContentView>
 
-            <Entry 
+                <Entry 
                        Text="{Binding AuthenModel.Username, Mode=TwoWay}"
                        Placeholder="Username" 
                        PlaceholderColor="White"
@@ -47,7 +50,7 @@
                        TextColor="White"
                        FontSize="Small"             
                       />
-            <Entry 
+                <Entry 
                        Text="{Binding AuthenModel.Password, Mode=TwoWay}"
                        IsPassword="true" 
                        Placeholder="Password"
@@ -59,9 +62,9 @@
                        FontSize="Small"
                        StyleClass="Small"/>
 
-            <Button 
+                <Button 
                         Command="{Binding LoginCommand}"
-                        BackgroundColor="#FFFFFF"
+                       
                         TextColor="#3ABCC7"
                         BorderColor="#3ABCC7"
                         BorderWidth="0.8"
@@ -69,10 +72,10 @@
                         Grid.Row="4" 
                         Grid.Column="0" 
                         Grid.ColumnSpan="2" 
-                        StyleClass="Small"/>
+                      />
 
 
-            <Label Text="Rememberme"
+                <Label Text="Rememberme"
                        Grid.Row="6"
                        Grid.Column="0"
                        FontSize="Small"
@@ -80,7 +83,7 @@
                        VerticalOptions="CenterAndExpand"
                        HorizontalOptions="CenterAndExpand"/>
 
-            <Label Text="Forgot password?"
+                <Label Text="Forgot password?"
                        Grid.Row="6"
                        Grid.Column="1"
                        FontSize="Small"
@@ -89,6 +92,8 @@
                        HorizontalOptions="CenterAndExpand"
                        />
 
-        </Grid>
-    </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

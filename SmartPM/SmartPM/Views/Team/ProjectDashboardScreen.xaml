@@ -26,11 +26,12 @@
                              Grid.Row="0"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                        <Image Source="addnew.png"/>
+                             Margin="5,0,0,0"
+                             BackgroundColor="#512DA8">
+                        <Image Source="thumDetail" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
                         <Label 
-                        TextColor="#44687b"
-                        Text="Detail" HorizontalOptions="Center"/>
+                        TextColor="White"
+                        Text="Detail" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </Grid.GestureRecognizers>
@@ -39,11 +40,12 @@
                              Grid.Row="0"
                              Grid.Column="1"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                        <Image Source="editnew"/>
+                             Margin="0,0,5,0"
+                             BackgroundColor="#00695C">
+                        <Image Source="thumTask" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
                         <Label 
-                        TextColor="#44687b"
-                        Text="Task" HorizontalOptions="Center"/>
+                        TextColor="White"
+                        Text="Task" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
                         </Grid.GestureRecognizers>
@@ -53,10 +55,11 @@
                              Grid.Row="1"
                              Grid.Column="0"
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                        <Image Source="list.png"/>
-                        <Label TextColor="#44687b"
-                        Text="Relevant Person" HorizontalOptions="Center"/>
+                             Margin="5,0,0,0"
+                             BackgroundColor="#6A1B9A">
+                        <Image Source="thumPersons" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
+                        <Label TextColor="White"
+                        Text="Relevant Person" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                         </Grid.GestureRecognizers>
@@ -66,11 +69,12 @@
                              Grid.Row="1"
                              Grid.Column="1"       
                              Padding="5,20,0,5"
-                             BackgroundColor="White">
-                        <Image Source="plist.png"/>
+                             Margin="0,0,5,0"
+                             BackgroundColor="#546E7A">
+                        <Image Source="thumChart" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
                         <Label 
-                        TextColor="#44687b"
-                        Text="Dummy ROOT[A]" HorizontalOptions="Center"/>
+                        TextColor="White"
+                        Text="Tracking Performance" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
                         </Grid.GestureRecognizers>
@@ -84,8 +88,8 @@
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0" Source="userTemp" HeightRequest="30" Aspect="AspectFit" Margin="0,10,0,10"></Image>
                             <StackLayout Grid.Column="1" VerticalOptions="Center">
-                                <Label Text="PRPJECT PTC001" FontSize="20" TextColor="White"></Label>
-                                <Label Text="KST Co.,ltd" FontSize="10" Margin="0,-10,0,0" TextColor="#ffe6e9" FontAttributes="Italic"></Label>
+                                <Label Text="โปรเจค SpaceXcross" FontSize="15" TextColor="White"></Label>
+                                <Label Text="Tesra Co.,ltd" FontSize="10" Margin="0,-10,0,0" TextColor="#ffe6e9" FontAttributes="Italic"></Label>
                             </StackLayout>
                         </Grid>
                     </Grid>

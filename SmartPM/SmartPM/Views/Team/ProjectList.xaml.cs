@@ -28,20 +28,20 @@ namespace SmartPM.Views.Team
             {
                 new AProjectList
                 {
-                    projectName = "dummyProject001",
-                    projectManager = "dummyManager001",
-                    projectStart = "dummyStartDate",
-                    projectEnd = "dummyEndDate",
-                    projectCost = "10,000,000 Baht"
+                    projectName = "โปรเจค SpacXcross",
+                    projectManager = "Elon Maskie",
+                    projectStart = "32 มกราคม 2561 - 32 มกราคม 2580",
+                    projectEnd = "0 Days",
+                    projectCost = "10,000,000,000 Baht"
                 },
                
                   new AProjectList
                 {
-                    projectName = "dummyProject005",
-                    projectManager = "dummyManager005",
-                    projectStart = "dummyStartDate",
-                    projectEnd = "dummyEndDate",
-                    projectCost = "10 Baht"
+                    projectName = "โปรเจค NextEarth",
+                    projectManager = "Elon Maskie",
+                    projectStart = "30 กุมภาพันธ์ 2561 - 32 มกราคม 2580",
+                    projectEnd = "0 Days",
+                    projectCost = "100,000,000,000,000,000 Baht"
                 }
             };
             projectlist.ItemsSource = list;
