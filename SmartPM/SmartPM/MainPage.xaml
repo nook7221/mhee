@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SmartPM"
              x:Class="SmartPM.MainPage">
 
-    <local:RoundEntry Text="Custom Entry"
-                      FontSize="30" />
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+
+        <TimePicker x:Name="MaintimePicker"
+                    >
+        </TimePicker>
+
+        <Label x:Name="MainLabel" Text=""></Label>
+    </StackLayout>
 
 </ContentPage>

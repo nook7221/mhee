@@ -13,6 +13,7 @@ using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Net;
 using SmartPM.Views.Team;
+using SmartPM.Views;
 
 namespace SmartPM.Views.Team
 {
@@ -44,7 +45,7 @@ namespace SmartPM.Views.Team
 
         private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TeamMainTimesheet());
+            await Navigation.PushAsync(new GlobalTimesheet());
         }
 
         private async void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace SmartPM.Views.Team
 
         private async void TapGestureRecognizer_Tapped_3(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new dummyView());
+            await Navigation.PushAsync(new GlobalTimelineScreen());
         }
     }
 }

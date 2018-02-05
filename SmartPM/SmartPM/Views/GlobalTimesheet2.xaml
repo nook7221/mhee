@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPM.Views.GlobalTimesheet2"
+             Title="Pick Task">
+    <ContentPage.Content>
+
+        <StackLayout Padding="20">
+            <Label Text="Step 2 Select Task" HorizontalOptions="CenterAndExpand" TextColor="Gold" FontSize="Medium" Margin="0,0,0,20"></Label>
+            <Label Text="EmpName : Emp001" HorizontalOptions="StartAndExpand" TextColor="Green" FontSize="Small" ></Label>
+            <Label Text="EmpPosition : God" HorizontalOptions="StartAndExpand" TextColor="Green" FontSize="Small" ></Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                
+                
+                <Label Text="Timesheet Detail"
+                           TextColor="#44687b"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           />
+
+                <Label Text="Project Name : "
+                           TextColor="#44687b"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           />
+
+                <Label Text="{Binding GprojectName}"
+                           TextColor="#44687b"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           />
+
+                <Picker x:Name="phase" 
+                            Title="Pick Select phase"
+                            TextColor="Black"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,30"
+                            SelectedIndexChanged="phase_SelectedIndexChanged"
+                            />
+
+
+                <Button Clicked="Button_Clicked"
+                            Text="Back previous"
+                            TextColor="#3ABCC7"
+                            BackgroundColor="#FFFFFF"
+                            BorderColor="#3ABCC7"
+                            BorderWidth="0.8"
+                            BorderRadius="20"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            StyleClass="Small"/>
+                
+                <Button Clicked="Button_Clicked2"
+                            Text="Next Step"
+                            TextColor="#3ABCC7"
+                            BackgroundColor="#FFFFFF"
+                            BorderColor="#3ABCC7"
+                            BorderWidth="0.8"
+                            BorderRadius="20"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            StyleClass="Small"/>
+            </Grid>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

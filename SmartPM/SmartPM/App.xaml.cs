@@ -25,7 +25,8 @@ namespace SmartPM
             //var page = new PMDashboardScreen();
             ///NavigationPage.SetHasBackButton(page, false);
             //MainPage = new LoginScreen();
-           // MainPage = new GlobalTimelineScreen();
+            // MainPage = new GlobalTimelineScreen();
+           // MainPage = new MainPage();
         }
 
 		protected override void OnStart ()
