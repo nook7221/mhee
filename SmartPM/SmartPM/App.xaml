@@ -5,6 +5,30 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style x:Name="LabelStyle"
+                   TargetType ="Label">
+                <Setter Property="Label.FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>PromptLight.ttf#PromptLight</OnPlatform.Android>
+                            <OnPlatform.iOS>Courier New</OnPlatform.iOS>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Name="EntryStyle"
+                   TargetType ="Entry">
+                <Setter Property="Entry.FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>PromptLight.ttf#PromptLight</OnPlatform.Android>
+                            <OnPlatform.iOS>Courier New</OnPlatform.iOS>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
 
 	</Application.Resources>
 </Application>

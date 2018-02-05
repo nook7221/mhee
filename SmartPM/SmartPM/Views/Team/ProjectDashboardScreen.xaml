@@ -74,7 +74,7 @@
                         <Image Source="thumChart" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
                         <Label 
                         TextColor="White"
-                        Text="Tracking Performance" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
+                        Text="Timeline" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontAttributes="Italic"/>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
                         </Grid.GestureRecognizers>

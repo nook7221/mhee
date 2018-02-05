@@ -2223,7 +2223,7 @@ namespace SmartPM.Droid
 			public const int blure_2 = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int chart = 2130837590;
+			public const int Bullet = 2130837590;
 			
 			// aapt resource value: 0x7f020057
 			public const int design_bottom_navigation_item_background = 2130837591;

@@ -4,18 +4,23 @@
              x:Class="SmartPM.Views.LoginScreen"
              xmlns:local="clr-namspace:SmartPM;assembly:SmartPM"
              xmlns:vm="clr-namespace:SmartPM.ViewModels;assembly:SmartPM"
-             BackgroundImage="blure_2.jpg"
+             BackgroundImage="blure_2"
              >
     <!--BackgroundColor="#E91E63"-->
     <ContentPage.BindingContext>
         <vm:AuthenViewModel/>
     </ContentPage.BindingContext>
     
-    <AbsoluteLayout Padding="50"
+    <AbsoluteLayout Margin="20"
                      HorizontalOptions="Center"
                      VerticalOptions="Center">
         <StackLayout>
-            <Grid >
+            <Label Text="SMART PM" FontSize="40" 
+                   TextColor="White" 
+                   Style="{DynamicResource LabelStyle}" 
+                   HeightRequest="70" 
+                   HorizontalOptions="CenterAndExpand"></Label>
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="5"/>
@@ -30,7 +35,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
+<!--
                 <ContentView HeightRequest="220" 
                              WidthRequest="200"
                              Grid.Row="0" 
@@ -38,7 +43,7 @@
                              Grid.ColumnSpan="2" 
                              Padding="0,20,0,3">
                     <Image Source="" Aspect="AspectFit" />
-                </ContentView>
+                </ContentView> -->
 
                 <Entry 
                        Text="{Binding AuthenModel.Username, Mode=TwoWay}"
@@ -48,7 +53,8 @@
                        Grid.Column="0" 
                        Grid.ColumnSpan="2" 
                        TextColor="White"
-                       FontSize="Small"             
+                       FontSize="Small"  
+                       Style="{DynamicResource EntryStyle}"
                       />
                 <Entry 
                        Text="{Binding AuthenModel.Password, Mode=TwoWay}"
@@ -60,11 +66,11 @@
                        Grid.ColumnSpan="2" 
                        TextColor="White"
                        FontSize="Small"
-                       StyleClass="Small"/>
+                       Style="{DynamicResource EntryStyle}"
+                       />
 
                 <Button 
                         Command="{Binding LoginCommand}"
-                       
                         TextColor="#3ABCC7"
                         BorderColor="#3ABCC7"
                         BorderWidth="0.8"
@@ -80,19 +86,19 @@
                        Grid.Column="0"
                        FontSize="Small"
                        TextColor="White"
+                       Style="{DynamicResource LabelStyle}"
                        VerticalOptions="CenterAndExpand"
                        HorizontalOptions="CenterAndExpand"/>
 
-                <Label Text="Forgot password?"
+            <Label Text="Forget Password"
                        Grid.Row="6"
                        Grid.Column="1"
                        FontSize="Small"
                        TextColor="White"
+                       Style="{DynamicResource LabelStyle}"
                        VerticalOptions="CenterAndExpand"
                        HorizontalOptions="CenterAndExpand"
                        />
-
-
             </Grid>
         </StackLayout>
     </AbsoluteLayout>
